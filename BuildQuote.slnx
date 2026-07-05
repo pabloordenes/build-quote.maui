@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BuildQuote.App/BuildQuote.App.csproj" />
+  <Project Path="BuildQuote.Domain/BuildQuote.Domain.csproj" />
+  <Project Path="BuildQuote.Infrastructure/BuildQuote.Infrastructure.csproj" />
+</Solution>
