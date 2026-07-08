@@ -3,12 +3,20 @@
     x:Class="BuildQuote.App.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:BuildQuote.App"
-    Title="BuildQuote.App">
+    xmlns:views="clr-namespace:BuildQuote.App.Views"
+    Title="BuildQuote"
+    Shell.TabBarBackgroundColor="{AppThemeBinding Light=White, Dark=#1E293B}"
+    Shell.TabBarTitleColor="{AppThemeBinding Light=#0284C7, Dark=#38BDF8}"
+    Shell.TabBarUnselectedColor="{AppThemeBinding Light=#94A3B8, Dark=#64748B}">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Nueva Cotización">
+            <ShellContent Route="CreateQuotePage" ContentTemplate="{DataTemplate views:CreateQuotePage}" />
+        </Tab>
+
+        <Tab Title="Inventario">
+            <ShellContent Route="MaterialPage" ContentTemplate="{DataTemplate views:MaterialPage}" />
+        </Tab>
+    </TabBar>
 
 </Shell>
